@@ -57,20 +57,20 @@ $(function(){
 
 //Determines the picture to use based on the hour
 function getPicture(hour) {
-	if(hour <= 5)
-		return 1;
-	else if(hour <= 8)
-		return 2;
-	else if(hour <= 11)
-		return 3;
-	else if(hour <= 15)
-		return 4;
-	else if(hour <= 18)
-		return 5;
-	else if(hour <= 20)
-		return 6;
-	else if(hour <= 22)
+	if(hour >= 22)
 		return 7;
+	else if(hour >= 20)
+		return 6;
+	else if(hour >= 18)
+		return 5;
+	else if(hour >= 15)
+		return 4;
+	else if(hour >= 11)
+		return 3;
+	else if(hour >= 8)
+		return 2;
+	else if(hour >= 5)
+		return 1;
 	else
 		return 8;
 };
