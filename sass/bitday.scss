@@ -79,12 +79,13 @@ h3 {
 	color: #fff;
 }
 
-.credits a {
-	color: #fff;
-}
-
-.credits a:hover {
-	text-decoration:underline;
+.social {
+	position: fixed;
+	width: 192px;
+	height: 20px;
+	position: fixed;
+	top: 5px;
+	left: 15px;
 }
 
 @mixin makeImage($i) {
@@ -109,6 +110,9 @@ footer {
 	text-align: right;
 	a {
 		text-decoration: none;
-		color: #000;	
+		color: #fff;	
+	}
+	a:hover {
+		text-decoration: underline;
 	}
 }

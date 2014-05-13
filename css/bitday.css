@@ -80,14 +80,15 @@ h3 {
   color: #fff; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000382}}
-.credits a {
-  color: #fff; }
+.social {
+  position: fixed;
+  width: 192px;
+  height: 20px;
+  position: fixed;
+  top: 5px;
+  left: 15px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000386}}
-.credits a:hover {
-  text-decoration: underline; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-0 {
   background-image: url("../img/0.png");
   width: 100%;
@@ -97,7 +98,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-1 {
   background-image: url("../img/1.png");
   width: 100%;
@@ -107,7 +108,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-2 {
   background-image: url("../img/2.png");
   width: 100%;
@@ -117,7 +118,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-3 {
   background-image: url("../img/3.png");
   width: 100%;
@@ -127,7 +128,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-4 {
   background-image: url("../img/4.png");
   width: 100%;
@@ -137,7 +138,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-5 {
   background-image: url("../img/5.png");
   width: 100%;
@@ -147,7 +148,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-6 {
   background-image: url("../img/6.png");
   width: 100%;
@@ -157,7 +158,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-7 {
   background-image: url("../img/7.png");
   width: 100%;
@@ -167,7 +168,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\0000392}}
 .bg-8 {
   background-image: url("../img/8.png");
   width: 100%;
@@ -177,7 +178,7 @@ h3 {
   margin: 0;
   padding: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\00003103}}
 footer {
   position: fixed;
   bottom: 18px;
@@ -186,7 +187,10 @@ footer {
   font-size: 12px;
   color: #000;
   text-align: right; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\00003111}}
   footer a {
     text-decoration: none;
-    color: #000; }
+    color: #fff; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Alan\/Documents\/GitHub\/BitDay\/sass\/bitday\.scss}line{font-family:\00003115}}
+  footer a:hover {
+    text-decoration: underline; }
