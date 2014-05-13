@@ -1,25 +1,26 @@
 $(function(){
 	$('.clock').hide();
-	$body = $('body');
+	$h1 = $('h1');
+	$h3 = $('h3');
 
 	//Sets the font size based on scale
-    var setBodyScale = function() {
-	    var scaleSource = $body.width(),
-	        scaleFactor = 0.35,                     
-	        maxScale = 600,
-	        minScale = 2; //Tweak these values to taste
+    var setScale = function(elem, scaleFactor) {
+	    var scaleSource = elem.width(),             
+	        maxScale = 500,
+	        minScale = 100; //Tweak these values to taste
 
 	    var fontSize = scaleSource * scaleFactor; //Multiply the width of the body by the scaling factor:
 
 	    if (fontSize > maxScale) fontSize = maxScale;
 	    if (fontSize < minScale) fontSize = minScale;
 
-	    $('body').css('font-size', fontSize + '%');
+	    elem.css('font-size', fontSize + '%');
 	}
 
 	//Resize font based on windows size
     $(window).resize(function(){
-        setBodyScale();
+        setScale($h1, .35);
+        setScale($h3, .35);
     });
 
     //Fade our title page into the real wallpaper. 

@@ -34,7 +34,7 @@ body {
 
 .title {
 	z-index: 10;
-	width: 90%;
+	width: 60%;
 	background-color: rgba(0, 0, 0, .6);
 	margin: 0 auto;
 	margin-top: 10%;
@@ -43,7 +43,8 @@ body {
 
 .clock {
 	z-index: 10;
-	width: 25%;
+	width: 20%;
+	min-width: 200px;
 	background-color: rgba(0, 0, 0, .6);
 	margin: 0 auto;
 	margin-top: 10%;
@@ -52,7 +53,6 @@ body {
 
 h1 {
 	font-family: 'Press Start 2P', cursive;
-	font-size: 70px;
 	text-align: center;
 	color: #fff;
 	padding: 10px 0px;
@@ -61,7 +61,6 @@ h1 {
 
 h3 {
 	font-family: 'Press Start 2P', cursive;
-	font-size: 30px;
 	text-align: center;
 	color: #fff;
 	padding: 10px 0px;
