@@ -1,7 +1,7 @@
 BitDay Homepage
 ======
 
-A website that changes based on the time of the day using the beautiful [BitDay wallpaper set](http://imgur.com/a/VZ9H2). The idea is to have a homepage site that shows the current time and changes backgrounds based on the time of the day. It's perfect for when you start up your browser, open new tabs, or if you don't have anything going on in one of your spair monitors :smile: . Checkout the images below for the stages of days and corressponding hours.
+A website that changes based on the time of the day using the beautiful [BitDay wallpaper set](http://imgur.com/a/VZ9H2). The idea is to have a homepage site that shows the current time and changes backgrounds based on the time of the day. It's perfect for when you start up your browser, open new tabs, or if you don't have anything going on in one of your spair monitors :smile:. Checkout the images below for the different stages of the day and their corressponding hours.
 
 
 ## Images
@@ -43,4 +43,4 @@ To edit CSS you will need to install SASS through RUBY. I recommend using a comp
 
 ## BitDay Wallpapers
 
-The BitDay wallpapers were created by [/u/BloodyMarvellous](http://www.reddit.com/user/BloodyMarvellous) on Reddit and became popular via (this post)[http://www.reddit.com/r/wallpapers/comments/1tqe9k/update_new_version_of_the_8bit_day_wallpaper_set/]. All credit goes to him. You can install a changing wallpaper app on your desktop with these wallpapers at [http://bitday.escism.net/](http://bitday.escism.net/). 
+The BitDay wallpapers were created by [/u/BloodyMarvellous](http://www.reddit.com/user/BloodyMarvellous) on Reddit and became popular via [this post](http://www.reddit.com/r/wallpapers/comments/1tqe9k/update_new_version_of_the_8bit_day_wallpaper_set/). All credit goes to him. You can install a changing wallpaper app on your desktop with these wallpapers at [http://bitday.escism.net/](http://bitday.escism.net/). 
