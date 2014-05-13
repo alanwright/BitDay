@@ -5,23 +5,31 @@ $(function(){
 
 	//Sets the font size based on scale
     var setScale = function(elem, scaleFactor) {
-	    var scaleSource = elem.width(),             
+	    var scaleSource = $('body').width(),             
 	        maxScale = 500,
 	        minScale = 100; //Tweak these values to taste
 
 	    var fontSize = scaleSource * scaleFactor; //Multiply the width of the body by the scaling factor:
-
+	    console.log(fontSize);
 	    if (fontSize > maxScale) fontSize = maxScale;
 	    if (fontSize < minScale) fontSize = minScale;
 
+	    console.log(elem + " " + fontSize);
 	    elem.css('font-size', fontSize + '%');
 	}
 
+	//Resize fonts
+	setScale($h1, .2);
+	setScale($h3, .10);
+
 	//Resize font based on windows size
     $(window).resize(function(){
-        setScale($h1, .35);
-        setScale($h3, .35);
+        setScale($h1, .2);
+        setScale($h3, .10);
     });
+
+	updateClock();
+	setInterval('updateClock()', 1000);
 
     //Fade our title page into the real wallpaper. 
     setTimeout(function() {
@@ -47,12 +55,6 @@ $(function(){
     	$('.clock').fadeIn();
 
     	}, 5000);
-
-	//Resize fonts as necessary
-	setBodyScale();
-
-	updateClock();
-	setInterval('updateClock()', 1000);
 });
 
 //Determines the picture to use based on the hour
