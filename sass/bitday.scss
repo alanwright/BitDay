@@ -88,6 +88,10 @@ h3 {
 	left: 15px;
 }
 
+.fb-like {
+	float: left;
+}
+
 @mixin makeImage($i) {
 	.bg-#{$i} { background-image: url('../img/#{$i}.png');
 	width: 100%;
