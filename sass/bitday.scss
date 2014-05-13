@@ -1,3 +1,104 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.bg-splash, .title, .clock {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.bg-splash {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	background-image: url('../img/00-splash.png');
+}
+
+.title {
+	z-index: 10;
+	width: 90%;
+	background-color: rgba(0, 0, 0, .6);
+	margin: 0 auto;
+	margin-top: 10%;
+	display: block;
+}
+
+.clock {
+	z-index: 10;
+	width: 25%;
+	background-color: rgba(0, 0, 0, .6);
+	margin: 0 auto;
+	margin-top: 10%;
+	display: block;
+}
+
+h1 {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 70px;
+	text-align: center;
+	color: #fff;
+	padding: 10px 0px;
+	margin: 0;
+}
+
+h3 {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+	padding: 10px 0px;
+	margin: 0;
+}
+
+.credits {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	padding-bottom: 18px;
+	padding-right: 18px;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 12px;
+	color: #fff;
+}
+
+.credits a {
+	color: #fff;
+}
+
+.credits a:hover {
+	text-decoration:underline;
+}
+
+@mixin makeImage($i) {
+	.bg-#{$i} { background-image: url('../img/#{$i}.png');
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;}
+}
+
+@for $i from 0 through 8 { @include makeImage($i) };
+
 footer {
 	position: fixed;
 	bottom: 18px;
@@ -10,62 +111,4 @@ footer {
 		text-decoration: none;
 		color: #000;	
 	}
-}
-
-.title {
-	width: 80%;
-	background: #000;
-	opacity:0.6;
-  	filter:alpha(opacity=60);
-	margin: 0 auto;
-	margin-top: 15%;
-	display: block;
-}
-
-h1 {
-	font-family: 'Press Start 2P', cursive;
-	font-size: 1em;
-	text-align: center;
-	color: #fff;
-	padding: 10px 0px;
-	margin: 0;
-}
-
-h5 {
-	padding: 0px 0px;
-	padding-bottom: 10px;
-	font-family: 'Press Start 2P', cursive;
-	font-size: 16px;
-	text-align: center;
-	color: #fff;
-}
-
-.credits {
-	position: fixed;
-	bottom: 0px;
-	right: 0px;
-	padding-bottom: 18px;
-	padding-right: 18px;
-	font-family: helvetica, arial, sans-serif;
-	font-size: 12px;
-	color: white;
-}
-
-.bg-splash {
-	background-image: url('../img/00-splash.png');
-}
-
-@mixin makeImage($i) {
-	&.bg-#{$i} { background-image: url('../img/bg-#{$i}.jpg'); }
-}
-
-body {
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin: 0;
-	padding: 0;
-
-	@for $i from 0 through 23 { @include makeImage($i);	}
 }
