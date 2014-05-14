@@ -41,6 +41,14 @@ body {
 	display: block;
 }
 
+.title h1 {
+	font-family: 'Press Start 2P', cursive;
+	text-align: center;
+	color: #fff;
+	padding: 10px 0px;
+	margin: 0;
+}
+
 .clock {
 	z-index: 10;
 	width: 27.5%;
@@ -51,15 +59,7 @@ body {
 	display: block;
 }
 
-h1 {
-	font-family: 'Press Start 2P', cursive;
-	text-align: center;
-	color: #fff;
-	padding: 10px 0px;
-	margin: 0;
-}
-
-h3 {
+.clock h3 {
 	font-family: 'Press Start 2P', cursive;
 	text-align: center;
 	color: #fff;
@@ -80,7 +80,7 @@ h3 {
 
 .social {
 	position: fixed;
-	width: 200px;
+	width: 195px;
 	height: 25px;
 	position: fixed;
 	top: 5px;
@@ -89,6 +89,11 @@ h3 {
 
 .fb-like {
 	float: left;
+}
+
+.tweet {
+	float: right;
+	display: block;
 }
 
 @mixin makeImage($i) {
