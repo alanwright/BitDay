@@ -14,22 +14,22 @@ Early Morning (Hours 5-7)
 Morning (Hours 8-10)
 ![Image 2](https://github.com/alanwright/BitDay/blob/gh-pages/img/2.png?raw=true)
 
-Early Afternoon (Hours 11-14)
+Early Afternoon (Hours 10-15)
 ![Image 3](https://github.com/alanwright/BitDay/blob/gh-pages/img/3.png?raw=true)
 
-Late Afternoon (Hours 15-17)
+Late Afternoon (Hours 16-17)
 ![Image 4](https://github.com/alanwright/BitDay/blob/gh-pages/img/4.png?raw=true)
 
-Evening and Early Sunset (Hours 18-19)
+Evening and Early Sunset (Hour 18)
 ![Image 5](https://github.com/alanwright/BitDay/blob/gh-pages/img/5.png?raw=true)
 
-Late Evening and Sunset (Hours 20-21)
+Late Evening and Sunset (Hours 19-20)
 ![Image 6](https://github.com/alanwright/BitDay/blob/gh-pages/img/6.png?raw=true)
 
-Night (Hours 22-24)
+Night (Hours 21 - 23 and 0 - 1)
 ![Image 7](https://github.com/alanwright/BitDay/blob/gh-pages/img/7.png?raw=true)
 
-Late Night and Early Morning (Hours 0-4)
+Late Night and Early Morning (Hours 2-4)
 ![Image 8](https://github.com/alanwright/BitDay/blob/gh-pages/img/8.png?raw=true)
 
 ## What's in the Code?

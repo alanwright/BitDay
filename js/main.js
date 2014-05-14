@@ -60,13 +60,13 @@ $(function(){
 
 //Determines the picture to use based on the hour
 function getPicture(hour) {
-	if(hour >= 22)
+	if(hour >= 21 || hour <=1)
 		return 7;
-	else if(hour >= 20)
+	else if(hour >= 19)
 		return 6;
 	else if(hour >= 18)
 		return 5;
-	else if(hour >= 15)
+	else if(hour >= 16)
 		return 4;
 	else if(hour >= 11)
 		return 3;
