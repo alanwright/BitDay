@@ -3,8 +3,8 @@
 	"options": {
 		"cache":         true,
 		"debug":         true,
-		"line-comments": true,
-		"line-numbers":  true,
+		"line-comments": false,
+		"line-numbers":  false,
 		"style":         "nested"
 	}
 }
