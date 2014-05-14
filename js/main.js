@@ -1,5 +1,6 @@
 $(function(){
 	$('.clock').hide();
+	$('.music').hide();
 
 	//Cache these for performance
 	$h1 = $('h1');
@@ -51,6 +52,7 @@ $(function(){
 
     	updateClock();
     	$('.clock').fadeIn();
+    	$('.music').fadeIn();
 	}, 5000);
 
      //Start updating the clock

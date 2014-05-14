@@ -96,6 +96,13 @@ body {
 	position: fixed;
 	bottom: 30px;
 	left: 15px;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.music:hover {
+	opacity:1.0;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
 }
 
 .fb-like {
