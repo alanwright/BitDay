@@ -81,9 +81,20 @@ body {
 .social {
 	position: fixed;
 	width: 195px;
-	height: 25px;
+	height: 42px;
 	position: fixed;
 	top: 5px;
+	left: 15px;
+	float: left;
+}
+
+.music {
+	position: fixed;
+	width: 20%;
+	min-width:170px;
+	height: 25px;
+	position: fixed;
+	bottom: 30px;
 	left: 15px;
 }
 
