@@ -6,7 +6,7 @@ A website that changes based on the time of the day using the beautiful [BitDay 
 
 ## Images
 Splash Page
-![Splash](https://github.com/alanwright/BitDay/blob/gh-pages/img/00-Splash.png?raw=true)
+![Splash](https://github.com/alanwright/BitDay/blob/gh-pages/img/00-Splash-NoText.png?raw=true)
 
 Early Morning (Hours 5-7)
 ![Image 1](https://github.com/alanwright/BitDay/blob/gh-pages/img/1.png?raw=true)

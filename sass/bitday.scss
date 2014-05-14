@@ -29,7 +29,7 @@ body {
 	background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
-	background-image: url('../img/00-Splash.png');
+	background-image: url('../img/00-Splash-NoText.png');
 }
 
 .title {
@@ -37,13 +37,13 @@ body {
 	width: 60%;
 	background-color: rgba(0, 0, 0, .6);
 	margin: 0 auto;
-	margin-top: 10%;
+	margin-top: 20%;
 	display: block;
 }
 
 .clock {
 	z-index: 10;
-	width: 20%;
+	width: 27.5%;
 	min-width: 200px;
 	background-color: rgba(0, 0, 0, .6);
 	margin: 0 auto;
