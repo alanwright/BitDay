@@ -1,20 +1,21 @@
 $(function(){
 	$('.clock').hide();
+
+	//Cache these for performance
 	$h1 = $('h1');
 	$h3 = $('h3');
+	$body = $('body');
 
 	//Sets the font size based on scale
     var setScale = function(elem, scaleFactor) {
-	    var scaleSource = $('body').width(),             
+	    var scaleSource = $body.width(),             
 	        maxScale = 500,
 	        minScale = 100; //Tweak these values to taste
 
 	    var fontSize = scaleSource * scaleFactor; //Multiply the width of the body by the scaling factor:
-	    console.log(fontSize);
 	    if (fontSize > maxScale) fontSize = maxScale;
 	    if (fontSize < minScale) fontSize = minScale;
 
-	    console.log(elem + " " + fontSize);
 	    elem.css('font-size', fontSize + '%');
 	}
 
@@ -28,9 +29,6 @@ $(function(){
         setScale($h3, .10);
     });
 
-	updateClock();
-	setInterval('updateClock()', 1000);
-
     //Fade our title page into the real wallpaper. 
     setTimeout(function() {
 
@@ -38,8 +36,6 @@ $(function(){
 		var d = new Date();
 		var hour = d.getHours();
 		var cssClass = getPicture(hour);
-		
-		updateClock();
 
 		//Made our waiting div the active div
 		$('.bg-tobe').removeClass('bg-tobe').addClass('bg-' + cssClass);
@@ -52,9 +48,14 @@ $(function(){
     	//Fade in the new bg and clock. Fade out the title
     	$('.bg-' + cssClass).fadeIn();
     	$('.title').fadeOut();
-    	$('.clock').fadeIn();
 
-    	}, 5000);
+    	updateClock();
+    	$('.clock').fadeIn();
+	}, 5000);
+
+     //Start updating the clock
+	setInterval('updateClock()', 1000);
+
 });
 
 //Determines the picture to use based on the hour
@@ -79,15 +80,56 @@ function getPicture(hour) {
 
 function updateClock() {
 	var d = new Date();
-
 	var hours = d.getHours();
 	var mins = d.getMinutes();
 	var ampm = hours < 12 ? "AM" : "PM";
 
-	mins = (mins < 10 ? "0" : "") + mins;
-	hours = hours > 12 ? hours - 12 : hours;
-	hours = hours == 0 ? 12 : hours;
+	//Formatting
+	mins = ((mins < 10) ? "0" : "") + mins;
+	hours = (hours > 12) ? hours - 12 : hours;
+	hours = (hours == 0) ? 12 : hours;
+	hours = ((hours < 10) ? "0" : "") + hours;
 
 	var str = hours + ":" + mins + " " + ampm;
-	$('.clock h3').text(str);
+
+	//Set the new time
+	var $clock = $('.clock h3');
+	var oldStr = $clock.text();
+	$clock.text(str);
+
+	//Check if the hour has changed
+	var oldHour = getMilitaryHour(oldStr);
+	if(oldStr.length == 0) return;
+	var oldMinutes = oldStr.substring(3,5);
+	var currHour = d.getHours();
+	if(currHour != oldHour) {
+
+		//Change bgs
+		var cssClass = getPicture(currHour);
+		var oldClass = getPicture(oldHour);
+		
+		//Make our waiting div the active div
+		$('.bg-tobe').removeClass('bg-tobe').addClass('bg-' + cssClass);
+		
+		//Fade in the new bg
+    	$('.bg-' + cssClass).fadeIn();
+
+		//Fade out the active and put it in a waiting state
+    	$('.bg-' + oldClass).fadeOut(function() {
+    		$('.bg-' + oldClass).removeClass('bg-' + oldClass).addClass('bg-tobe');
+    	});
+	}
 };
+
+//Returns the military hour from a string formatted in standard time.
+function getMilitaryHour(str) {
+	var hour = parseInt(str.substring(0,2));
+	var ampm = str.substring(str.length - 2);
+
+	if(ampm == 'PM') 
+		return hour + 12;
+	else if(ampm == 'AM' && hour == 12)
+		return 0;
+	else
+		return hour;
+}
