@@ -102,24 +102,26 @@ function updateClock() {
 	//Check if the hour has changed
 	var oldHour = getMilitaryHour(oldStr);
 	if(oldStr.length == 0) return;
-	var oldMinutes = oldStr.substring(3,5);
 	var currHour = d.getHours();
 	if(currHour != oldHour) {
 
 		//Change bgs
 		var cssClass = getPicture(currHour);
 		var oldClass = getPicture(oldHour);
-		
-		//Make our waiting div the active div
-		$('.bg-tobe').removeClass('bg-tobe').addClass('bg-' + cssClass);
-		
-		//Fade in the new bg
-    	$('.bg-' + cssClass).fadeIn();
 
-		//Fade out the active and put it in a waiting state
-    	$('.bg-' + oldClass).fadeOut(function() {
-    		$('.bg-' + oldClass).removeClass('bg-' + oldClass).addClass('bg-tobe');
-    	});
+		if(cssClass != oldClass) {
+		
+			//Make our waiting div the active div
+			$('.bg-tobe').removeClass('bg-tobe').addClass('bg-' + cssClass);
+			
+			//Fade in the new bg
+	    	$('.bg-' + cssClass).fadeIn();
+
+			//Fade out the active and put it in a waiting state
+	    	$('.bg-' + oldClass).fadeOut(function() {
+	    		$('.bg-' + oldClass).removeClass('bg-' + oldClass).addClass('bg-tobe');
+	    	});
+	    }
 	}
 };
 
