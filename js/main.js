@@ -30,9 +30,36 @@ $(function(){
         setScale($h3, .10);
     });
 
-    //Fade our title page into the real wallpaper. 
-    setTimeout(function() {
+    //Check visited cookie
+    var visited = $.cookie("visited")
 
+    if (visited == null) {
+        //Fade our title page into the real wallpaper. 
+    	setTimeout(function() {
+
+	    	//Set the background
+			var d = new Date();
+			var hour = d.getHours();
+			var cssClass = getPicture(hour);
+
+			//Made our waiting div the active div
+			$('.bg-tobe').removeClass('bg-tobe').addClass('bg-' + cssClass);
+
+			//Fade out the active and put it in a waiting state
+	    	$('.bg-splash').fadeOut(function() {
+	    		$('.bg-splash').removeClass('bg-splash').addClass('bg-tobe');
+	    	});
+
+	    	//Fade in the new bg and clock. Fade out the title
+	    	$('.bg-' + cssClass).fadeIn();
+	    	$('.title').fadeOut();
+
+	    	updateClock();
+	    	$('.clock').fadeIn();
+	    	$('.music').fadeIn();
+		}, 5000);       
+    }
+    else {
     	//Set the background
 		var d = new Date();
 		var hour = d.getHours();
@@ -40,20 +67,20 @@ $(function(){
 
 		//Made our waiting div the active div
 		$('.bg-tobe').removeClass('bg-tobe').addClass('bg-' + cssClass);
+		$('.bg-splash').removeClass('bg-splash').addClass('bg-tobe');
 
-		//Fade out the active and put it in a waiting state
-    	$('.bg-splash').fadeOut(function() {
-    		$('.bg-splash').removeClass('bg-splash').addClass('bg-tobe');
-    	});
+		//Fade in bg and fade out title
+		$('.bg-' + cssClass).fadeIn('fast');
+    	$('.title').fadeOut('fast');
 
-    	//Fade in the new bg and clock. Fade out the title
-    	$('.bg-' + cssClass).fadeIn();
-    	$('.title').fadeOut();
+    	//Set up clock and music
+		updateClock();
+    	$('.clock').fadeIn('fast');
+    	$('.music').fadeIn('fast');
+    }
 
-    	updateClock();
-    	$('.clock').fadeIn();
-    	$('.music').fadeIn();
-	}, 5000);
+    // set cookie
+    $.cookie('visited', 'yes', { expires: 30, path: '/' });
 
      //Start updating the clock
 	setInterval('updateClock()', 1000);
