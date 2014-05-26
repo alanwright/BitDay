@@ -130,7 +130,7 @@ function getMilitaryHour(str) {
 	var hour = parseInt(str.substring(0,2));
 	var ampm = str.substring(str.length - 2);
 
-	if(ampm == 'PM') 
+	if(ampm == 'PM' && hour != 12) 
 		return hour + 12;
 	else if(ampm == 'AM' && hour == 12)
 		return 0;
